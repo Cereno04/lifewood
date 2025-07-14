@@ -809,44 +809,6 @@ img {
         transform: translate(-50%, 0);
     }
 }
-
-
-  /* New Section style */
-.showcase-section {
-    background-color: #F9F7F5;
-}
-
-.showcase-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Stacks on mobile by default */
-    gap: 2rem;
-    align-items: center;
-}
-
-/* 2. Style the image with larger rounded corners and a soft shadow */
-.showcase-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 16px; /* Larger radius to match the image */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    object-fit: cover;
-}
-
-/* 3. Style the text content to match the reference */
-.showcase-content h2 {
-    text-align: left;
-    color: #133020; /* The dark, rich green from the image */
-    font-size: clamp(2.2rem, 5vw, 3.2rem); /* Large, impactful font size */
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-}
-
-.showcase-content p {
-    color: var(--dark-text);
-    margin-bottom: 2rem;
-    max-width: 500px; /* Prevents text lines from getting too long */
-}
-
 /*
  * ====================================================================
  * NEW: TABLET-ONLY NAVIGATION OVERRIDE
@@ -899,14 +861,6 @@ img {
         pointer-events: auto;
         transition-delay: 0s;
     }
-   showcase-grid {
-        /* User requested image on the LEFT, so this order is correct based on the HTML structure. */
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-    } .showcase-grid {
-        grid-template-columns: 1fr 1fr; /* Creates the two-column layout */
-        gap: 3rem;
-    }
 }
 
 
@@ -920,9 +874,6 @@ img {
     }
     .why-lifewood-grid {
         gap: 4rem;
-    }
-    .showcase-grid {
-        gap: 5rem; /* More breathing room on large screens */
     }
 }
 
