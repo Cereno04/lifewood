@@ -823,11 +823,11 @@ img {
 }
 
 .global-map img {
-    max-width: 100%;
-    height: auto;
+    max-width: 80%;
+    height: 260px;
     max-height: 400px; /* Prevents the map from being excessively tall */
     margin: 0 auto 3rem auto; /* Centers map and adds space below */
-    opacity: 0.7;
+/*     opacity: 0.7; */
 }
 
 .global-locations-grid {
