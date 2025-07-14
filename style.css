@@ -575,6 +575,7 @@ img {
 /* 7. SCROLL REVEAL ANIMATION
 /* ====================================================== */
 .reveal {
+    color: #046241;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
