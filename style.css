@@ -810,6 +810,8 @@ img {
     }
 }
 
+
+  /* New Section style */
 .showcase-section {
     background-color: var(--bg-white); /* Uses existing CSS variables for consistency */
 }
@@ -1025,7 +1027,9 @@ img {
 .contact-map iframe:hover {
     filter: grayscale(0);
 }
-
+.showcase-grid {
+        gap: 4rem;
+    }
 
 /* --- Responsive Adjustments for New Sections --- */
 @media (min-width: 992px) {
