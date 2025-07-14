@@ -810,6 +810,41 @@ img {
     }
 }
 
+.showcase-section {
+    background-color: var(--bg-white); /* Uses existing CSS variables for consistency */
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stacks on mobile by default */
+    gap: 2rem;
+    align-items: center;
+}
+
+.showcase-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Matches the site's design */
+    box-shadow: var(--shadow); /* Matches the site's design */
+    object-fit: cover;
+}
+
+.showcase-content h2 {
+    text-align: left; /* Overrides the global centered h2 style */
+    margin-bottom: 1rem;
+}
+
+.showcase-content .lead-paragraph {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--dark-text);
+    margin-bottom: 1.5rem;
+}
+
+.showcase-content p {
+    margin-bottom: 2rem;
+}
+
 /*
  * ====================================================================
  * NEW: TABLET-ONLY NAVIGATION OVERRIDE
@@ -861,6 +896,10 @@ img {
         visibility: visible;
         pointer-events: auto;
         transition-delay: 0s;
+    }
+    .showcase-grid {
+        grid-template-columns: 1fr 1fr; /* Creates the two-column layout */
+        gap: 3rem;
     }
 }
 
