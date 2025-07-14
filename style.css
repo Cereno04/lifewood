@@ -813,7 +813,7 @@ img {
 
   /* New Section style */
 .showcase-section {
-    background-color: var(--bg-white); /* Uses existing CSS variables for consistency */
+    background-color: #F9F7F5;
 }
 
 .showcase-grid {
@@ -823,28 +823,28 @@ img {
     align-items: center;
 }
 
+/* 2. Style the image with larger rounded corners and a soft shadow */
 .showcase-image img {
     width: 100%;
     height: auto;
-    border-radius: 10px; /* Matches the site's design */
-    box-shadow: var(--shadow); /* Matches the site's design */
+    border-radius: 16px; /* Larger radius to match the image */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     object-fit: cover;
 }
 
+/* 3. Style the text content to match the reference */
 .showcase-content h2 {
-    text-align: left; /* Overrides the global centered h2 style */
-    margin-bottom: 1rem;
-}
-
-.showcase-content .lead-paragraph {
-    font-size: 1.15rem;
-    font-weight: 500;
-    color: var(--dark-text);
+    text-align: left;
+    color: #133020; /* The dark, rich green from the image */
+    font-size: clamp(2.2rem, 5vw, 3.2rem); /* Large, impactful font size */
+    line-height: 1.2;
     margin-bottom: 1.5rem;
 }
 
 .showcase-content p {
+    color: var(--dark-text);
     margin-bottom: 2rem;
+    max-width: 500px; /* Prevents text lines from getting too long */
 }
 
 /*
@@ -899,7 +899,11 @@ img {
         pointer-events: auto;
         transition-delay: 0s;
     }
-    .showcase-grid {
+   showcase-grid {
+        /* User requested image on the LEFT, so this order is correct based on the HTML structure. */
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    } .showcase-grid {
         grid-template-columns: 1fr 1fr; /* Creates the two-column layout */
         gap: 3rem;
     }
@@ -916,6 +920,9 @@ img {
     }
     .why-lifewood-grid {
         gap: 4rem;
+    }
+    .showcase-grid {
+        gap: 5rem; /* More breathing room on large screens */
     }
 }
 
@@ -1027,9 +1034,6 @@ img {
 .contact-map iframe:hover {
     filter: grayscale(0);
 }
-.showcase-grid {
-        gap: 4rem;
-    }
 
 /* --- Responsive Adjustments for New Sections --- */
 @media (min-width: 992px) {
