@@ -825,6 +825,7 @@ img {
 .global-map img {
     max-width: 80%;
     height: 260px;
+    border:#ececec solid 2px;
     max-height: 400px; /* Prevents the map from being excessively tall */
     margin: 0 auto 3rem auto; /* Centers map and adds space below */
 /*     opacity: 0.7; */
