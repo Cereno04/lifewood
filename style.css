@@ -809,6 +809,69 @@ img {
         transform: translate(-50%, 0);
     }
 }
+
+.global-presence-section {
+    background-color: var(--bg-light); /* Consistent light background */
+    text-align: center;
+}
+
+.global-subheadline {
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto; /* Centers the subheadline and adds space below */
+    color: var(--body-text);
+    font-size: 1.1rem;
+}
+
+.global-map img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* Prevents the map from being excessively tall */
+    margin: 0 auto 3rem auto; /* Centers map and adds space below */
+    opacity: 0.7;
+}
+
+.global-locations-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to a single column for mobile */
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto; /* Center the grid container itself */
+}
+
+.global-location-item {
+    background-color: var(--bg-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.global-location-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.global-location-item i {
+    font-size: 2rem;
+    color: var(--primary-color); /* Uses your site's main green color */
+    margin-bottom: 1rem;
+}
+
+.global-location-item h4 {
+    color: var(--dark-text);
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.global-location-item p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: var(--body-text);
+}
+
+
+
+
 /*
  * ====================================================================
  * NEW: TABLET-ONLY NAVIGATION OVERRIDE
@@ -817,6 +880,13 @@ img {
  * 768px and 1023px, overriding the desktop styles above.
  * ====================================================================
  */
+@media (min-width: 576px) {
+    .global-locations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
 @media (min-width: 768px) and (max-width: 1023.98px) {
     /* Restore the hamburger icon */
     .hamburger {
@@ -990,6 +1060,9 @@ img {
 @media (min-width: 992px) {
     .contact-grid {
         grid-template-columns: 1.2fr 1fr; /* Give form a bit more space */
+    }
+     .global-locations-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 /* ====================================================== */
